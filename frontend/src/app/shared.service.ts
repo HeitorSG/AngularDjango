@@ -13,15 +13,15 @@ readonly PhotoUrl = "http://127.0.0.1:8000/media/";
   }
 
   getDepList():Observable<any[]> {
-    return this.http.get<any[]>(this.APIUrl + '/department/');
+    return this.http.get<any[]>(this.APIUrl + '/department');
   }
 
   addDepartment(val: any) {
-    return this.http.post(this.APIUrl + '/department/', val);
+    return this.http.post(this.APIUrl + '/department', val);
   }
 
   updateDepartment(val: any) {
-    return this.http.put(this.APIUrl + '/department/', val);
+    return this.http.put(this.APIUrl + '/department', val);
   }
 
   deleteDepartment(val: any) {
@@ -29,15 +29,15 @@ readonly PhotoUrl = "http://127.0.0.1:8000/media/";
   }
 
   getEmpList():Observable<any[]> {
-    return this.http.get<any[]>(this.APIUrl + '/employee/');
+    return this.http.get<any[]>(this.APIUrl + '/employee');
   }
 
   addEmployee(val: any) {
-    return this.http.post(this.APIUrl + '/employee/', val);
+    return this.http.post(this.APIUrl + '/employee', val);
   }
 
   updateEmployee(val: any) {
-    return this.http.put(this.APIUrl + '/employee/', val);
+    return this.http.put(this.APIUrl + '/employee', val);
   }
 
   deleteEmployee(val: any) {
@@ -49,7 +49,7 @@ readonly PhotoUrl = "http://127.0.0.1:8000/media/";
   }
 
   getAllDepartmentNames():Observable<any[]> {
-    return this.http.get<any[]>(this.APIUrl + '/department/')
+    return this.http.get<any[]>(this.APIUrl + '/department')
   }
 
 }

@@ -1,1 +1,41 @@
-<p>show-dep works!</p>
+<button type="button" class="btn btn-info btn-lg" (click)="openModal()">click to open</button>
+    <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+         <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                     <div class="modal-header">
+                           <h4 class="modal-title">Model Title</h4>
+                           <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+                         </div>
+                <div class="modal-body">
+                           <p>Model body text</p>
+                         </div>
+                     <div class="modal-footer">
+                           <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Close</button>
+                         </div>
+            </div>
+             </div>
+ </div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>DepartmentId</th>
+            <th>Department Name</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of DepartmentList">
+            <td>{{dataItem.DepartmentId }}</td>
+            <td>{{dataItem.DepartmentName}}</td>
+            <td>
+                <button type="button" class="btn btn-light mr-1">
+                    Edit
+                </button>
+                <button type="button" class="btn btn-light mr-1">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
